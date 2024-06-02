@@ -1,7 +1,24 @@
 <!--index.wxml-->
 <navigation-bar title="Weixin" back="{{false}}" color="black" background="#FFF"></navigation-bar>
 <scroll-view class="scrollarea" scroll-y type="list">
-  <view class="container">
-    Weixin
+  <view >
+  <button type="primary" size="mini" bind:tap="handleClick">click me</button>
+  <button type="primary" size="mini" bindtap="handleClick">click me</button>
+  <view>
+  11
+    <input type="text" bindinput="handleInput"/>
+  </view>
+
+  <view mark:parentid='1'>
+    <button mark:id='2' bind:tap="handleGetMaskData">点我</button>
+  </view>
+
+  <view>
+    {{userInfo.name}}
+    {{userInfo.age}}
+    <button bind:tap="handleChange">change me</button>
+  </view>
+    
+
   </view>
 </scroll-view>

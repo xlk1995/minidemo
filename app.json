@@ -11,7 +11,7 @@
     "navigationBarTitleText": "demo",
     "navigationBarBackgroundColor": "#f3514f",
     "navigationBarTextStyle": "black",
-    "enablePullDownRefresh": true,
+    "enablePullDownRefresh": false,
     "backgroundColor": "#efefef",
     "backgroundTextStyle": "light"
   },
