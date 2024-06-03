@@ -194,6 +194,76 @@ this.setData({
 3. 必须连贯
 
 
+## 小程序生命周期
+
+### 全局生命周期
+1. onLaunch 冷启动
+2. onShow 热启动（切前台）
+3. onHide （切后台） 30分钟销毁
+
+### 页面生命周期
+
+- onLoad
+- onShow
+- onReady dom加载完
+- onHide
+- onUnload
+
+navgate 页面不会销毁， redirect会销毁
+
+切换tab，页面不会销毁， 左上返回，页面会销毁
+
+## 小程序api
+
+分为3类
+
+1. 异步api，通常都接受一个Object类型的参数， 如wx.request({})
+2. 同步api， 约定以sync结尾， 如wx.setStorageSync()
+3. 事件监听api，约定以on开头，例如 wx.onAppHide()
+
+异步api支持callback & promise两种调用方式
+
+- 当接口参数Object对象中不包含success/fail/complete时默认返回Promise
+- 部分接口如request， uploadFile本身就有返回值，不支持promise风格的调用方式
+
+
+### wx.request
+
+### loanding
+
+- wx.showLoading()
+- wx.hideLoading()
+
+### showToast
+
+wx.showToast()
+
+### showModal
+
+wx.showModal()
+
+### storage
+
+- wx.setStorageAysn()
+- wx.getStorageAysn()
+- wx.removeStorageAysn()
+- wx.clearStorageAysn()
+
+
+## 路由与通信
+
+- navgateTo
+- redirectTo
+- switchTab
+- relaunch
+- navgateBack
+
+除了switchTab都能传递参数 `?id=1&name=2`，在下一个页面的onLoad的形参中可以获取到
+
+
+
+
+
 
 
 
