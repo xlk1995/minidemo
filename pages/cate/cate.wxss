@@ -1,1 +1,21 @@
 /* pages/cate/cate.wxss */
+
+.scroll-y{
+  height: 100vh;
+  background: #efefef;
+}
+
+view {
+  height: 500rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+view:nth-child(odd) {
+  background-color: skyblue;
+} 
+
+view:nth-child(even) {
+  background-color: lightsalmon;
+}

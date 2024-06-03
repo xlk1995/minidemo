@@ -252,11 +252,11 @@ wx.showModal()
 
 ## 路由与通信
 
-- navgateTo
-- redirectTo
-- switchTab
-- relaunch
-- navgateBack
+- navgateTo  保留当前页面
+- redirectTo 不保留当前页面
+- switchTab 保留当前页面
+- relaunch 关闭所有页面打开一个新页面
+- navgateBack 关闭当前页面回到上一个页面
 
 除了switchTab都能传递参数 `?id=1&name=2`，在下一个页面的onLoad的形参中可以获取到
 

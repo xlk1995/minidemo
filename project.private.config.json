@@ -9,6 +9,13 @@
     "miniprogram": {
       "list": [
         {
+          "name": "pages/cate/cate",
+          "pathName": "pages/cate/cate",
+          "query": "",
+          "launchMode": "default",
+          "scene": null
+        },
+        {
           "name": "模拟强制更新",
           "pathName": "pages/index/index",
           "query": "",
