@@ -1,15 +1,4 @@
-
-
 <view>
 
-  <custom-nav text="我是插槽">
-    <view>
-      我是默认插槽  
-    </view>
-    <view slot="top-slot">上</view>
-    <view slot="bottom-slot">
-    下
-    </view>
-  </custom-nav>
-
+<custom-01 label="lol"/>
 </view>

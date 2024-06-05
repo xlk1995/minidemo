@@ -288,7 +288,33 @@ data为组件自己的数据， properties相当于props
   },
 ```
 
-### 
+### watch
+
+```javascript
+  observers: {
+    num: function(newValue){
+      console.log(newValue, "num")
+    },
+    str: function(newValue){
+      console.log(newValue, 'str');
+    },
+    "num, str": function(newNum, newStr){
+      console.log(newNum, newStr, '====');
+    },
+    'obj.name': function(newValue){
+      console.log(newValue, 'obj.name');
+    },
+    // 监听整个对象
+    'obj.**': function(newValue){
+      console.log(newValue, 'obj.**');
+    },
+    // 监听props， 初始会运行一次
+    'label': function(newValue){
+      console.log(newValue, 'lable');
+    },
+  }, 
+
+```
 
 
 

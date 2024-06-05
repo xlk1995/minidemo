@@ -16,7 +16,8 @@
     "backgroundTextStyle": "light"
   },
   "usingComponents": {
-    "custom-nav": "./components/custom-nav/custom-nav"
+    "custom-nav": "./components/custom-nav/custom-nav",
+    "custom-01": "./components/custom-01/custom-01"
 
   },
   "tabBar": {

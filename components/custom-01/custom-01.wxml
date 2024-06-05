@@ -1,0 +1,17 @@
+
+  <view>
+    {{num}}
+  </view>
+  <view>
+    {{str}}
+  </view>
+  <view>
+    {{obj.name}}
+  </view>
+  <view>
+    {{arr[1]}}
+  </view>
+
+  <view>
+    <button type="primary" plain bind:tap="handleChange">change</button>
+  </view>
