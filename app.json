@@ -15,6 +15,10 @@
     "backgroundColor": "#efefef",
     "backgroundTextStyle": "light"
   },
+  "usingComponents": {
+    "custom-nav": "./components/custom-nav/custom-nav"
+
+  },
   "tabBar": {
     "selectedColor": "#f3414f",
     "color": "#666",

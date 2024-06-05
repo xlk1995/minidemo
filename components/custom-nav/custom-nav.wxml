@@ -1,0 +1,16 @@
+
+<view>
+  {{text}}
+</view>
+
+<view>
+  <slot/>
+</view>
+
+<view>
+<slot name="top-slot"/>
+</view>
+
+<view>
+  <slot name="bottom-slot"></slot>
+</view>

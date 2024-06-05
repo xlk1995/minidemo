@@ -260,9 +260,35 @@ wx.showModal()
 
 除了switchTab都能传递参数 `?id=1&name=2`，在下一个页面的onLoad的形参中可以获取到
 
+## 组件
+
+### data和properties
 
 
+data为组件自己的数据， properties相当于props
 
+```javascript
+  properties: {
+    text: {
+      // String Number Boolean Object Array  null（所有）
+      type: String,
+      value: ''
+    }
+  },
+```
+
+### slot
+
+```javascript
+  options: {
+    // 开启多slot
+    multipleSlots: true, 
+    // 开始不需要样式隔离 用于修改组件样式
+    styleIsolation: 'shared'
+  },
+```
+
+### 
 
 
 
