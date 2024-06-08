@@ -315,7 +315,29 @@ data为组件自己的数据， properties相当于props
   }, 
 
 ```
+### 子组件向父组件传递数据
 
+```javascript
+this.triggerEvent('eventName', data)
+```
+
+```html
+<child bind:eventname="handleEvent">
+```
+
+```javascript
+handleEvent(e){
+  console.log(e.detail) 
+}
+```
+
+### 父组件获取子组件的实例（refs）
+
+
+```javascript
+    this.selectComponent('#id') //id选择器
+    this.selectComponent('.class') // class选择
+```
 
 
 
