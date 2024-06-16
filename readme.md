@@ -407,6 +407,59 @@ npm i pubsub-js
 import pubsub from 'pubsub-js'
 ```
 
+## 上拉加载下拉刷新的通用逻辑
+
+```javascript
+data:{
+  list: [], 
+  requestData: {
+    page:1, 
+    limit: 10,
+  },
+  total: 0,
+  isLoading: false,
+  isFinish: false
+},
+getList(){
+  this.data.isLoading = true
+  await ...
+  this.data.isLoading = false
+  this.setData({
+    list: [...this.date.list, ...list],
+    total
+  })
+},
+onReachBottom(){
+  const {requestData} = this.data
+  const {page} = requestData
+  if(this.data.isLoading) return
+
+  if(this.data.total === this.data.list.length) {
+   this.setData({
+     isFinish: true
+   })
+    return
+  }
+  this.setData({
+    requstData: {
+      ...this.data.requestData,
+      page: page + 1
+    }
+  })
+  this.getList()
+},
+onRefresh(){
+  this.setData({
+    list: [],
+    total: 0,
+    isFinish: false
+  
+  })
+}
+
+
+```
+
 
 
 
