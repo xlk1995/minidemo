@@ -365,5 +365,48 @@ handleEvent(e){
 
 定义在app.js中。 使用`getApp()`方法获取实例对象
 
+## 页面传递参数
+
+``` javascript
+  handleToList(){
+    wx.navigateTo({
+      url: '/pages/list/list',
+      success(res){
+        res.eventChannel.emit('cartEvent', {
+          name: 'tom'
+        })
+      },
+      events: {
+        listEvent: (msg)=> {
+          console.log('msg', msg);
+        }
+      }
+    })
+
+    
+```
+
+```javascript
+   const channel = this.getOpenerEventChannel()
+    channel.on('cartEvent', (res)=> {
+      console.log(res, 'cartEvent');
+      
+    })
+    channel.emit('listEvent', {age: 18})
+
+```
+
+### 全局事件总线 
+
+```
+npm i pubsub-js
+```
+自己看方法
+
+```javascript
+import pubsub from 'pubsub-js'
+```
+
+
 
 

@@ -4,4 +4,6 @@
 <navigator url="/modules/goodsModule/pages/list/list">点我</navigator>
 
 <button type="primary" bind:tap="login">登录</button>
+
+<button type="primary" bind:tap="handleToList">to list</button>
 </view>

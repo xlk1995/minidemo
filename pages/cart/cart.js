@@ -1,4 +1,5 @@
 // pages/cart/cart.js
+import pubsub from 'pubsub-js'
 const appInstance = getApp()
 Page({
 
@@ -18,6 +19,22 @@ Page({
   login(){
     appInstance.setToken()
     console.log(appInstance.globalData.token);
+    pubsub.publish('refreshList', {list: [1,2,3]})
+  },
+  handleToList(){
+    wx.navigateTo({
+      url: '/pages/list/list',
+      success(res){
+        res.eventChannel.emit('cartEvent', {
+          name: 'tom'
+        })
+      },
+      events: {
+        listEvent: (msg)=> {
+          console.log('msg', msg);
+        }
+      }
+    })
   },
 
   /**
