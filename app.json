@@ -7,6 +7,23 @@
     "pages/profile/profile",
     "pages/list/list"
   ],
+  "subPackages": [
+    {
+      "root": "modules/goodsModule",
+      "name": "goodsModule",
+      "pages": [
+        "pages/list/list",
+        "pages/detail/detail"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/cart/cart":{
+      "network": "all",
+      "packages": ["goodsModule"]
+    }
+
+  },
   "window": {
     "navigationBarTitleText": "demo",
     "navigationBarBackgroundColor": "#f3514f",
@@ -46,7 +63,6 @@
       "selectedIconPath": "/assets/tabbar/profile-active.png"
     }]
   },
-  "style": "v2",
   "sitemapLocation": "sitemap.json",
   "lazyCodeLoading": "requiredComponents"
 }

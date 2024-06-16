@@ -339,5 +339,27 @@ handleEvent(e){
     this.selectComponent('.class') // class选择
 ```
 
+## 分包及分包预下载
+ 独立分包(略)
+```json
+  "subPackages": [
+    {
+      "root": "modules/goodsModule",
+      "name": "goodsModule",
+      "pages": [
+        "pages/list/list",
+        "pages/detail/detail"
+      ]
+    }
+  ],
+  "preloadRule": {
+    "pages/cart/cart":{
+      "network": "all",
+      "packages": ["goodsModule"]
+    }
+
+  },
+```
+
 
 

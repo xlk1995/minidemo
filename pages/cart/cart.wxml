@@ -1,4 +1,5 @@
 <view>
 
 <custom-01 label="lol"/>
+<navigator url="/modules/goodsModule/pages/list/list">点我</navigator>
 </view>
