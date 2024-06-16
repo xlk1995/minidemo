@@ -2,4 +2,6 @@
 
 <custom-01 label="lol"/>
 <navigator url="/modules/goodsModule/pages/list/list">点我</navigator>
+
+<button type="primary" bind:tap="login">登录</button>
 </view>

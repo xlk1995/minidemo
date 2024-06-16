@@ -1,4 +1,5 @@
 // pages/cart/cart.js
+const appInstance = getApp()
 Page({
 
   /**
@@ -12,7 +13,11 @@ Page({
    * 生命周期函数--监听页面加载
    */
   onLoad(options) {
-
+  
+  },
+  login(){
+    appInstance.setToken()
+    console.log(appInstance.globalData.token);
   },
 
   /**

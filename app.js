@@ -1,6 +1,11 @@
 // app.js
 App({
-
+  globalData:{
+    token: ''
+  },
+  setToken(){
+    this.globalData.token = 'jfkjshfsajhfioasf'
+  }, 
   onLaunch(){
     const updateManager = wx.getUpdateManager()
     // 监听下载状态， 下载完之后触发onUpdateReady方法
